@@ -9,7 +9,9 @@
     <div>
         <%= author.name %>
     </div>
-    <a href="/authors/<%= author.id %>">View</a>
-    <a href="/authors/<%= author.id %>/edit">Edit</a>
-    <%- include('../partials/deleteForm' , {url: `/authors/${author.id}?_method=DELETE`}) %>
-        <% }) %>
+    <div class="btn-row">
+        <a href="/authors/<%= author.id %>" class="btn btn-primary">View</a>
+        <a href="/authors/<%= author.id %>/edit" class="btn btn-primary">Edit</a>
+        <%- include('../partials/deleteForm' , {url: `/authors/${author.id}?_method=DELETE`}) %>
+            <% }) %>
+    </div>
